@@ -44,7 +44,8 @@ func (j *timeJob) Run() {
 		log.Printf("execute job finished pass time:%v", delay)
 	}
 	j.run()
-
+	sleepTime := time.Duration(rand.Intn(3500)) * time.Millisecond
+	time.Sleep(sleepTime)
 }
 
 func Test1(*testing.T) {
@@ -57,9 +58,9 @@ func Test1(*testing.T) {
 
 	var doneJobs int32 = 0
 
-	for i := 0; i < 100_000; i++ {
+	for i := 0; i < 10_000; i++ {
 		time.Sleep(time.Duration(rand.Intn(50)+50) * time.Millisecond)
-		for j := 0; j < 100; j++ {
+		for j := 0; j < 1000; j++ {
 			wg.Add(1)
 
 			job := &timeJob{
