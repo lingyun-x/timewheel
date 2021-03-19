@@ -18,8 +18,8 @@ package wheel
 
 import (
 	"context"
-	"github.com/lingyun/timewheel/job"
-	queue2 "github.com/lingyun/timewheel/queue"
+	"github.com/lingyun-x/timewheel/job"
+	queue2 "github.com/lingyun-x/timewheel/queue"
 	"log"
 	"sync"
 	"time"

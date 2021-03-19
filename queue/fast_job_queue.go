@@ -18,7 +18,7 @@
 package queue
 
 import (
-	"github.com/lingyun/timewheel/job"
+	"github.com/lingyun-x/timewheel/job"
 	"sync"
 )
 
